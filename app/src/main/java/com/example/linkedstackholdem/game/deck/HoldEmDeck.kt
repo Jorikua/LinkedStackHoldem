@@ -1,7 +1,7 @@
 package com.example.linkedstackholdem.game.deck
 
-import com.example.linkedstackholdem.LinkedStack
 import com.example.linkedstackholdem.game.model.Card
+import com.example.linkedstackholdem.stack.LinkedStack
 
 class HoldEmDeck: CardDeck {
 
@@ -30,5 +30,5 @@ class HoldEmDeck: CardDeck {
     get() = Card.Suit.values().size * valuesList.size
 
   override val currentSize: Int
-    get() = stack.size()
+    get() = stack.size
 }

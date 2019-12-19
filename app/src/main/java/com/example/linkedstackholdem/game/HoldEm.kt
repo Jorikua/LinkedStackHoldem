@@ -2,7 +2,6 @@ package com.example.linkedstackholdem.game
 
 import android.util.Log
 import com.example.linkedstackholdem.game.deck.CardDeck
-import java.lang.IllegalStateException
 
 class HoldEm(
   override val playersCount: Int,
@@ -23,6 +22,7 @@ class HoldEm(
 
   override fun startTheGame() {
     cardDeck.refresh()
+    cardDeck.shuffle()
 
     val loop = cardsInHand * playersCount
 

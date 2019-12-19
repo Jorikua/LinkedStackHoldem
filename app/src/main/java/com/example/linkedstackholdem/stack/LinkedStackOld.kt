@@ -1,19 +1,12 @@
-package com.example.linkedstackholdem
+package com.example.linkedstackholdem.stack
 
 import java.util.*
 
 /**
  * A Stack implementation with a LinkedList inside.
  */
-class LinkedStack<T: Any> {
+class LinkedStackOld<T: Any> {
   private val list = LinkedList<T>()
-
-  /**
-   * Performs the given [action] on each element.
-   */
-  fun forEach(action: (T) -> Unit) {
-    list.forEach(action)
-  }
 
   /**
    * Inserts the specified element to stack.
@@ -62,7 +55,6 @@ class LinkedStack<T: Any> {
   fun shuffle() {
     list.shuffle()
   }
-
   /**
    * Returns the number of elements in this stack.
    *

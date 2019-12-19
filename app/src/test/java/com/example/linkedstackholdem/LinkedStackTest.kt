@@ -1,5 +1,6 @@
 package com.example.linkedstackholdem
 
+import com.example.linkedstackholdem.stack.LinkedStack
 import org.junit.Assert.*
 import org.junit.Test
 import java.util.NoSuchElementException
@@ -39,20 +40,20 @@ class LinkedStackTest {
   @Test
   fun `empty stack test`() {
     val stack = LinkedStack<Any>()
-    assertEquals(0, stack.size())
+    assertEquals(0, stack.size)
   }
 
   @Test
   fun `size test`() {
     val stack = LinkedStack<String>()
     stack.push("1")
-    assertEquals(1, stack.size())
+    assertEquals(1, stack.size)
     stack.push("2")
-    assertEquals(2, stack.size())
+    assertEquals(2, stack.size)
     stack.pop()
-    assertEquals(1, stack.size())
+    assertEquals(1, stack.size)
     stack.pop()
-    assertEquals(0, stack.size())
+    assertEquals(0, stack.size)
   }
 
   @Test
@@ -69,7 +70,7 @@ class LinkedStackTest {
         push(it)
       }
     }
-    assertEquals(stack.size(), 4)
+    assertEquals(stack.size, 4)
 
     stack.clear()
     assertTrue(stack.isEmpty())
