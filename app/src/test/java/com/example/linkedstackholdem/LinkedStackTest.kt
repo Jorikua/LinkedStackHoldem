@@ -22,13 +22,6 @@ class LinkedStackTest {
   }
 
   @Test
-  fun `push all test`() {
-    val stack = LinkedStack<String>()
-    stack.pushAll(listOf("1", "2"))
-    assertEquals(2, stack.size())
-  }
-
-  @Test
   fun `pop test`() {
     val stack = LinkedStack<String>()
     val value = "1"
@@ -72,7 +65,9 @@ class LinkedStackTest {
   @Test
   fun `clear test`() {
     val stack = LinkedStack<String>().apply {
-      pushAll(listOf("1", "2", "3", "4"))
+      listOf("1", "2", "3", "4").forEach {
+        push(it)
+      }
     }
     assertEquals(stack.size(), 4)
 

@@ -20,8 +20,9 @@ class MainActivity : AppCompatActivity() {
     val listOfDiamonds = listOf("2D", "3D", "4D", "5D", "6D", "7D", "8D", "9D", "10D", "JD", "QD", "KD", "AD")
 
     val stack = LinkedStack<String>().apply {
-      val generalList = listOf(listOfSpades, listOfHearts, listOfClubs, listOfDiamonds).flatten()
-      pushAll(generalList)
+      listOf(listOfSpades, listOfHearts, listOfClubs, listOfDiamonds).flatten().forEach {
+        push(it)
+      }
       shuffle()
     }
 

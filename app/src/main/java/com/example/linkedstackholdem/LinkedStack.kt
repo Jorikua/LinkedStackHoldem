@@ -9,15 +9,6 @@ class LinkedStack<T: Any> {
   private val list = LinkedList<T>()
 
   /**
-   * Inserts the specified elements to stack.
-   *
-   * @param elements the elements to add
-   */
-  fun pushAll(elements: Iterable<T>) {
-    list.addAll(elements)
-  }
-
-  /**
    * Performs the given [action] on each element.
    */
   fun forEach(action: (T) -> Unit) {
