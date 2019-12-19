@@ -22,7 +22,7 @@ class HoldEm(
   }
 
   override fun startTheGame() {
-    cardDeck.invalidateDeck()
+    cardDeck.refresh()
 
     val loop = cardsInHand * playersCount
 
