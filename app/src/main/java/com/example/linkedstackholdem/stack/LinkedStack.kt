@@ -5,7 +5,7 @@ import java.util.*
 class LinkedStack<T: Any> : Iterable<T?> {
 
   var size = 0
-  var first: Node<T>? = null
+  private var first: Node<T>? = null
 
   /**
    * Inserts the specified element to stack.
@@ -74,7 +74,7 @@ class LinkedStack<T: Any> : Iterable<T?> {
     }
   }
 
-  inner class Node<T>(
+  private inner class Node<T>(
     var value: T,
     var prev: Node<T>? = null,
     var next: Node<T>? = null
