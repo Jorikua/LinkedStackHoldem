@@ -63,7 +63,7 @@ class LinkedStackTest {
   }
 
   @Test
-  fun `peek test empty stack`() {
+  fun `peek from empty stack test`() {
     val stack = LinkedStack<String>()
     val peek = stack.peek()
     assertNull(peek)
