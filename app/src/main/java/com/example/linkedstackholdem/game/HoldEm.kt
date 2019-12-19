@@ -4,8 +4,9 @@ import android.util.Log
 import com.example.linkedstackholdem.game.deck.CardDeck
 import java.lang.IllegalStateException
 
-class HoldEm(override val playersCount: Int,
-             override val cardDeck: CardDeck
+class HoldEm(
+  override val playersCount: Int,
+  override val cardDeck: CardDeck
 ) : CardGame {
 
   private val TAG = HoldEm::class.java.simpleName
@@ -17,7 +18,7 @@ class HoldEm(override val playersCount: Int,
     get() = 2
 
   init {
-    if (playersCount > maxNumberOfPlayers) throw IllegalStateException("Number of players should be less than maxNumberOfPlayers $maxNumberOfPlayers")
+    if (playersCount > maxNumberOfPlayers) throw IllegalStateException("Number of players should be less than maxNumberOfPlayers: $maxNumberOfPlayers")
   }
 
   override fun startTheGame() {

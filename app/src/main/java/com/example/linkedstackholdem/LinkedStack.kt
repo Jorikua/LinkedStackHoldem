@@ -40,7 +40,7 @@ class LinkedStack<T: Any> {
   }
 
   /**
-   * Pops an element from the stack represented by this stack. In other
+   * Pops an element from the stack. In other
    * words, removes and returns the element of this stack.
    * @return the element at the top of this stack
    * @throws NoSuchElementException if this stack is empty
