@@ -94,7 +94,7 @@ class LinkedStack<T: Any> : Iterable<T?> {
     }
 
     override fun next(): T? {
-      if (!hasNext()) throw IllegalStateException("")
+      if (!hasNext()) throw IllegalStateException("Stack is empty")
       val value = currentItem?.value
       currentItem = currentItem?.next
       i++
