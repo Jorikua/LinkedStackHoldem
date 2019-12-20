@@ -16,11 +16,11 @@ class LinkedStack<T: Any> : Iterable<T?> {
     val item = first
     val newNode = Node(
       value = value,
-      prev = null,
+//      prev = null,
       next = item
     )
 
-    first?.prev = newNode
+//    first?.prev = newNode
 
     first = newNode
     size++
@@ -35,7 +35,7 @@ class LinkedStack<T: Any> : Iterable<T?> {
   fun pop(): T {
     val temp = first ?: throw NoSuchElementException("No such element")
     first = temp.next
-    temp.prev = null
+//    temp.prev = null
     size--
     return temp.value
   }
@@ -76,7 +76,7 @@ class LinkedStack<T: Any> : Iterable<T?> {
 
   private inner class Node<T>(
     var value: T,
-    var prev: Node<T>? = null,
+//    var prev: Node<T>? = null,
     var next: Node<T>? = null
   )
 
